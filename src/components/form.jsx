@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {changeField} from '../actions/change-form';
+import {changeField} from '../actions/form';
 
 class Form extends React.Component {
 
@@ -11,7 +11,7 @@ class Form extends React.Component {
     render() {
         return (
             <div className="form">
-                <input type="text" name="name" onChange={this.changeFieldHandler.bind(this)}/>
+                <input type="text" name="search" value={this.props.form.search || ''} onChange={this.changeFieldHandler.bind(this)}/>
             </div>
         );
     }
