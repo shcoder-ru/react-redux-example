@@ -20,7 +20,7 @@ class Results extends React.Component {
                 );
                 break;
             default:
-                return <div/>;
+                return <div>Empty</div>;
                 break;
         }
     }
