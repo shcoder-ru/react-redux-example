@@ -22,7 +22,7 @@ const requestSearch = store => next => action => {
                 store.dispatch(resultsSuccess(data.result.results));
             }
         }).catch(error => {
-            store.dispatch(resultsFailure(error));
+            store.dispatch(resultsFailure(error && error.message || 'Unknown Error'));
         });
     }
 }

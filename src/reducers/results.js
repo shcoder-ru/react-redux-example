@@ -8,7 +8,6 @@ export function results(state = {}, action) {
         return {...state, status: action.status, error: action.error};
     }
     if (action.type === FETCH_RESULTS_SUCCESS) {
-        console.log(action.status);
         return {...state, status: action.status, items: action.items};
     }
     return state;
